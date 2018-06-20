@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+	#include<bits/stdc++.h>
 using namespace std;
 
 typedef struct ind {
@@ -178,6 +178,8 @@ void cross ( ind pop[1000] ){
 		f1 = avalia(f1);
 		f2 = avalia(f2);
 		mutacao(f1);
+		f1.front=-1;
+		f2.front=-1;
 		mutacao(f2);
 		dep[tam]=f1; tam++;
 		dep[tam]=f2; tam++;
@@ -247,12 +249,14 @@ int main()
  }
 for( int ger=0; ger<500; ger++){
  	avalia_pop(pop);	
+	
 	if(rand()%2==0)	qsort (pop, 1000, sizeof(ind), ordena);   
 	if(rand()%2==1)	qsort (pop, 1000, sizeof(ind), ordena1);   
 	cross(pop); 
-	
-	if(ger%50==0) {
-for(int i=0; i<1000; i++) printf("%lf %lf\n", pop[i].f1, pop[i].f2);
+	avalia_pop(pop);
+	if(ger==499) {	
+	for(int i=0; i<1000; i++) printf("%lf %lf\n", pop[i].f1, pop[i].f2	);
+
 	
 	printf("\n---\n");
 }
