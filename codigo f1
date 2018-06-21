@@ -1,4 +1,4 @@
-	#include<bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
 typedef struct ind {
@@ -247,9 +247,10 @@ int main()
 	
 		
  }
-for( int ger=0; ger<500; ger++){
- 	avalia_pop(pop);	
+avalia_pop(pop);	
 	
+for( int ger=0; ger<500; ger++){
+ 	
 	if(rand()%2==0)	qsort (pop, 1000, sizeof(ind), ordena);   
 	if(rand()%2==1)	qsort (pop, 1000, sizeof(ind), ordena1);   
 	cross(pop); 
